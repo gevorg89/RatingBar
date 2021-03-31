@@ -62,8 +62,8 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.gevorg89.ratingbar'
-                artifactId = 'final'
-                version = '1.0'
+                /*artifactId = 'final'
+                version = '1.0'*/
             }
             // Creates a Maven publication called “debug”.
             debug(MavenPublication) {
@@ -71,8 +71,8 @@ afterEvaluate {
                 from components.debug
 
                 groupId = 'com.gevorg89.ratingbar'
-                artifactId = 'final-debug'
-                version = '1.0'
+                /*artifactId = 'final-debug'
+                version = '1.0'*/
             }
         }
     }
