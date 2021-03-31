@@ -10,7 +10,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 
 @Composable
-fun Slider(
+fun RatingBar(
     modifier: Modifier = Modifier,
     @IntRange(from = 1) steps: Int = 5,
     @FloatRange(from = 0.0, to = 1.0) stepSize: Float = 0.5f,
@@ -20,32 +20,10 @@ fun Slider(
     fill: @Composable () -> Unit,
     onValueChanged: (rating: Float) -> Unit = { _ -> }
 ) {
-    SliderImpl(
-        modifier,
-        isIndicator,
-        steps,
-        stepSize,
-        value,
-        out,
-        fill
-    ) {
-        onValueChanged(it)
-    }
-}
-
-@Composable
-private fun SliderImpl(
-    modifier: Modifier,
-    isIndicator: Boolean,
-    steps: Int,
-    stepSize: Float,
-    value: Float,
-    out: @Composable () -> Unit,
-    fill: @Composable () -> Unit,
-    onValueChanged: (Float) -> Unit
-) {
     var sizeRowWidth by remember { mutableStateOf(0f) }
-    if (value > steps.toFloat()) {
+    if (value < 0f) {
+        onValueChanged(0f)
+    } else if (value > steps.toFloat()) {
         onValueChanged(steps.toFloat())
     }
     val offsetX = (value / steps) * sizeRowWidth

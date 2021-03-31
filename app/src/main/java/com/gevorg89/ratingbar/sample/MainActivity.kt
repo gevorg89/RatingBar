@@ -1,6 +1,6 @@
 package com.gevorg89.ratingbar.sample
 
-import Slider
+import RatingBar
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -30,8 +30,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             RatingBarTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    //SliderScreen()
-                    Column {
+                    SliderScreen()
+                    /*Column {
                         RowItem {
                             TemplateItem(text = "Stars") {
 
@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
 
                             }
                         }
-                    }
+                    }*/
                 }
             }
         }
@@ -79,7 +79,7 @@ fun TemplateItem(text: String, onClick: () -> Unit) {
 fun SliderScreen() {
     var valueState by remember { mutableStateOf(4.5f) }
     val width = 32.dp
-    Slider(
+    RatingBar(
         modifier = Modifier
             .background(Color.Gray)
             .padding(16.dp),
@@ -105,7 +105,7 @@ fun SliderScreen() {
     Column(Modifier.padding(top = 100.dp)) {
         Text(text = valueState.toString())
         Button(onClick = {
-            valueState = 4f
+            valueState = -4f
         }) {
             Text(text = "CHANGE")
         }
