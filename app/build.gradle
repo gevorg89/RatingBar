@@ -54,5 +54,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    implementation project(':ratingbar')
+    //implementation project(':ratingbar')
+    implementation 'com.github.gevorg89:RatingBar:1.0.0'
 }
