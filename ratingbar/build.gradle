@@ -3,7 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'maven-publish'
 }
-group='com.gevorg89.ratingbar'
+
+group='com.github.gevorg89'
 
 ext {
     compose_version = '1.0.0-beta01'
