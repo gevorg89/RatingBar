@@ -1,4 +1,4 @@
-package com.gevorg89.ratingbar
+package com.gevorg89.ratingbar.sample
 
 import Slider
 import android.os.Bundle
