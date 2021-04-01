@@ -2,8 +2,6 @@
 [![](https://jitpack.io/v/gevorg89/RatingBar.svg)](https://jitpack.io/#gevorg89/RatingBar)
 > The simple RatingBar library for Jetpack Compose!
 
-## Demo
-![](images/stars.png)
 ### Implementation
 from JitPack:
 ```gradle
@@ -15,12 +13,13 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.gevorg89:RatingBar:1.0.0'
+    implementation 'com.github.gevorg89:RatingBar:LATEST_VERSION'
 }
 ```
 
 ### How use
 ``` kotlin
+var valueState by remember { mutableStateOf(4.5f) }
 RatingBar(
             modifier = Modifier
                 .background(Color.Gray)
@@ -33,8 +32,7 @@ RatingBar(
             },
             stepSize = 0.5f,
             steps = 5,
-            value = valueState,
-            isIndicator = false
+            value = valueState
         ) { rating ->
             valueState = rating
         }
@@ -47,3 +45,7 @@ RatingBar(
             }
         }
 ```
+>You can set any Composable fun in empty/filled block
+
+### Examples:
+![](images/stars.png)
