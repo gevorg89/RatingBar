@@ -3,7 +3,7 @@
 > The simple RatingBar library for Jetpack Compose!
 
 ## Demo
-![](images/stars.png){:height="300px"}
+![](images/stars.png){:height="400px" width="400px"}
 ### Implementation
 from JitPack:
 ```gradle
