@@ -50,6 +50,6 @@ private fun RowItem(content: @Composable () -> Unit) {
 @Composable
 private fun TemplateItem(text: String, onClick: () -> Unit) {
     Button(onClick = onClick) {
-        Text(text = text, textAlign = TextAlign.Center, modifier =Modifier.width(100.dp))
+        Text(text = text, textAlign = TextAlign.Center, modifier = Modifier.width(100.dp))
     }
 }
