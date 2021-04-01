@@ -21,16 +21,15 @@ fun CircleScreen() {
         modifier = Modifier
             .background(Color.Gray)
             .padding(16.dp),
-        out = {
+        empty = {
             CircleRating(Color.Cyan, width)
         },
-        fill = {
+        filled = {
             CircleRating(Color.Red, width)
         },
         stepSize = 0.5f,
         steps = 10,
-        value = valueState,
-        isIndicator = false
+        value = valueState
     ) { rating ->
         valueState = rating
     }

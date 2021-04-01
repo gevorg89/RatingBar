@@ -20,16 +20,15 @@ fun SingleImageScreen() {
         modifier = Modifier
             .background(Color.Gray)
             .padding(16.dp),
-        out = {
+        empty = {
             AndroidRating(Color.LightGray)
         },
-        fill = {
+        filled = {
             AndroidRating(Color.Green)
         },
         stepSize = 0.01f,
         steps = 1,
-        value = valueState,
-        isIndicator = false
+        value = valueState
     ) { rating ->
         valueState = rating
     }

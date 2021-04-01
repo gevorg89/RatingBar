@@ -15,9 +15,8 @@ fun RatingBar(
     @IntRange(from = 1) steps: Int = 5,
     @FloatRange(from = 0.0, to = 1.0) stepSize: Float = 0.5f,
     @FloatRange(from = 0.0) value: Float = 0.0f,
-    isIndicator: Boolean = false,
-    out: @Composable () -> Unit,
-    fill: @Composable () -> Unit,
+    empty: @Composable () -> Unit,
+    filled: @Composable () -> Unit,
     onValueChanged: (rating: Float) -> Unit = { _ -> }
 ) {
     var sizeRowWidth by remember { mutableStateOf(0f) }
@@ -29,31 +28,24 @@ fun RatingBar(
     val offsetX = (value / steps) * sizeRowWidth
     Box(modifier = modifier) {
         Row(
-            Modifier
-                .then(
-                    if (isIndicator) {
-                        Modifier
-                    } else {
-                        Modifier.pointerInteropFilter { event ->
-                            when (event.action) {
-                                MotionEvent.ACTION_MOVE, MotionEvent.ACTION_UP -> {
-                                    move(
-                                        event,
-                                        sizeRowWidth,
-                                        stepSize,
-                                        steps,
-                                        value,
-                                        onValueChanged
-                                    )
-                                }
-                            }
-                            true
-                        }
+            Modifier.pointerInteropFilter { event ->
+                when (event.action) {
+                    MotionEvent.ACTION_MOVE, MotionEvent.ACTION_UP -> {
+                        move(
+                            event,
+                            sizeRowWidth,
+                            stepSize,
+                            steps,
+                            value,
+                            onValueChanged
+                        )
                     }
-                )
+                }
+                true
+            }
         ) {
             repeat(steps) {
-                out()
+                empty()
             }
         }
         Row(
@@ -68,7 +60,7 @@ fun RatingBar(
         ) {
             repeat(steps) {
                 Row {
-                    fill()
+                    filled()
                 }
             }
         }

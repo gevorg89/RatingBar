@@ -16,16 +16,15 @@ fun TextScreen() {
         modifier = Modifier
             .background(Color.Gray)
             .padding(16.dp),
-        out = {
+        empty = {
             TextRating(color = Color.Black)
         },
-        fill = {
+        filled = {
             TextRating(color = Color.Green)
         },
         stepSize = 0.01f,
         steps = 1,
-        value = valueState,
-        isIndicator = false
+        value = valueState
     ) { rating ->
         valueState = rating
     }

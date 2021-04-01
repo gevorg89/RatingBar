@@ -56,6 +56,6 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     def navigation_compose = "1.0.0-alpha09"
     implementation "androidx.navigation:navigation-compose:$navigation_compose"
-    //implementation project(':ratingbar')
-    implementation 'com.github.gevorg89:RatingBar:1.0.0'
+    implementation project(':ratingbar')
+    //implementation 'com.github.gevorg89:RatingBar:1.0.0'
 }

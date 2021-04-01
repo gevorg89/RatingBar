@@ -21,22 +21,22 @@ import com.gevorg89.ratingbar.sample.R
 @Composable
 fun StarsScreen() {
     var valueState by remember { mutableStateOf(4.5f) }
+    //var valueState  = 4.5f
     val width = 32.dp
     Column {
         RatingBar(
             modifier = Modifier
                 .background(Color.Gray)
                 .padding(16.dp),
-            out = {
+            empty = {
                 StarRating(R.drawable.ic_baseline_star_outline_24, width)
             },
-            fill = {
+            filled = {
                 StarRating(R.drawable.ic_baseline_star_24, width)
             },
             stepSize = 0.5f,
             steps = 5,
-            value = valueState,
-            isIndicator = false
+            value = valueState
         ) { rating ->
             valueState = rating
         }
