@@ -7,7 +7,7 @@ import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.gevorg89.ratingbar.sample.Destinations.Circle
+import com.gevorg89.ratingbar.sample.Destinations.Shape
 import com.gevorg89.ratingbar.sample.Destinations.Home
 import com.gevorg89.ratingbar.sample.Destinations.SingleImage
 import com.gevorg89.ratingbar.sample.Destinations.Stars
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = Home) {
                     composable(Home) {
                         HomeScreen(
-                            actions.openCircle,
+                            actions.openShape,
                             actions.openStars,
                             actions.openSingleImage,
                             actions.openText
@@ -34,8 +34,8 @@ class MainActivity : ComponentActivity() {
                     composable(Stars) {
                         StarsScreen()
                     }
-                    composable(Circle) {
-                        CircleScreen()
+                    composable(Shape) {
+                        ShapeScreen()
                     }
                     composable(SingleImage) {
                         SingleImageScreen()

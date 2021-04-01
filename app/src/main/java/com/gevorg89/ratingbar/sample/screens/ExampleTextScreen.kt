@@ -2,12 +2,15 @@ package com.gevorg89.ratingbar.sample.screens
 
 import RatingBar
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun TextScreen() {
@@ -35,6 +38,9 @@ fun TextScreen() {
 private fun TextRating(color: Color) {
     Text(
         text = "Hello Android!!!",
-        color = color
+        color = color,
+        modifier = Modifier.fillMaxSize(),
+        fontSize = 48.sp,
+        textAlign = TextAlign.Center
     )
 }

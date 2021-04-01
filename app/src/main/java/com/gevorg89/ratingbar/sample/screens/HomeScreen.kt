@@ -5,6 +5,7 @@ import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -19,7 +20,7 @@ fun HomeScreen(
             TemplateItem(text = "Stars") {
                 openStars()
             }
-            TemplateItem(text = "CircleShape") {
+            TemplateItem(text = "Shapes") {
                 openCircle()
             }
         }
@@ -49,6 +50,6 @@ private fun RowItem(content: @Composable () -> Unit) {
 @Composable
 private fun TemplateItem(text: String, onClick: () -> Unit) {
     Button(onClick = onClick) {
-        Text(text = text, Modifier.width(100.dp))
+        Text(text = text, textAlign = TextAlign.Center, modifier =Modifier.width(100.dp))
     }
 }
