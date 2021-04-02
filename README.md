@@ -58,7 +58,7 @@ private fun StarRating(@DrawableRes drawable: Int, width: Dp = 24.dp) {
     )
 }
 ```
-![](images/stars.png)
+![](images/stars.gif)
 
 ``` kotlin
 @Composable
@@ -71,7 +71,7 @@ private fun CircleRating(color: Color, width: Dp) {
     ) {}
 }
 ```
-![](images/stars.png)
+![](images/stars.gif)
 
 ``` kotlin
 @Composable
@@ -84,7 +84,7 @@ private fun AndroidRating(tint: Color) {
     )
 }
 ```
-![](images/stars.png)
+![](images/stars.gif)
 
 ``` kotlin
 @Composable
@@ -95,4 +95,4 @@ private fun TextRating(color: Color) {
     )
 }
 ```
-![](images/stars.png)
+![](images/stars.gif)
