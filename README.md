@@ -1,4 +1,4 @@
-# Jetpack Compose RatingBar
+# RatingBar for Jetpack Compose
 [![](https://jitpack.io/v/gevorg89/RatingBar.svg)](https://jitpack.io/#gevorg89/RatingBar)
 > The simple RatingBar library for Jetpack Compose!
 
