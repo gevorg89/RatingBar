@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -17,6 +18,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.gevorg89.ratingbar.sample.R
 
+@ExperimentalComposeUiApi
 @Composable
 fun StarsScreen() {
     Column(
@@ -47,6 +49,7 @@ private fun StarHeader(width: Dp) {
     Text(text = width.toString(), color = Color.Cyan)
 }
 
+@ExperimentalComposeUiApi
 @Composable
 private fun StarRatingBar(width: Dp) {
     var valueState by remember { mutableStateOf(4.5f) }
@@ -64,14 +67,6 @@ private fun StarRatingBar(width: Dp) {
         ) { rating ->
             valueState = rating
         }
-        /*Column {
-            Text(text = valueState.toString())
-            Button(onClick = {
-                valueState = 1.5f
-            }) {
-                Text(text = "Change value to 1.5")
-            }
-        }*/
     }
 }
 

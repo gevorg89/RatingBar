@@ -10,6 +10,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.GenericShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.*
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -17,6 +18,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
+@ExperimentalComposeUiApi
 @Composable
 fun ShapeScreen() {
     Column(
@@ -31,6 +33,7 @@ fun ShapeScreen() {
     }
 }
 
+@ExperimentalComposeUiApi
 @Composable
 fun ShapeRatingBar(empty: @Composable () -> Unit, filled: @Composable () -> Unit) {
     var valueState by remember { mutableStateOf(4.5f) }
@@ -47,6 +50,7 @@ fun ShapeRatingBar(empty: @Composable () -> Unit, filled: @Composable () -> Unit
     }
 }
 
+@ExperimentalComposeUiApi
 @Composable
 fun CircleShapeRatingBar() {
     val width = 32.dp
@@ -55,6 +59,7 @@ fun CircleShapeRatingBar() {
         filled = { CircleRating(Color.Red, width) })
 }
 
+@ExperimentalComposeUiApi
 @Composable
 fun SquareShapeRatingBar() {
     val width = 32.dp
@@ -63,6 +68,7 @@ fun SquareShapeRatingBar() {
         filled = { SquareRating(Color.Red, width) })
 }
 
+@ExperimentalComposeUiApi
 @Composable
 fun TriangleShapeRatingBar() {
     val width = 32.dp

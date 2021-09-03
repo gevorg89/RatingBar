@@ -7,7 +7,7 @@ plugins {
 group='com.github.gevorg89'
 
 ext {
-    compose_version = '1.0.0-beta01'
+    compose_version = '1.0.2'
 }
 
 android {

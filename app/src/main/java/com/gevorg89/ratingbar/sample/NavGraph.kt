@@ -1,7 +1,6 @@
 package com.gevorg89.ratingbar.sample
 
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.navigate
 import com.gevorg89.ratingbar.sample.Destinations.Shape
 import com.gevorg89.ratingbar.sample.Destinations.SingleImage
 import com.gevorg89.ratingbar.sample.Destinations.Stars
